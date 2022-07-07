@@ -1,6 +1,6 @@
 .hero {
         background-color: #C4C4C4;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/img-hero-mobile.jpg);
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/img-hero-mobile.jpg);
             background-size: 480px 400px;
             margin-right: auto;
             margin-left: auto;
@@ -13,6 +13,20 @@
     .hero {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/img-hero-mobile@2x.jpg);
     }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/img-hero-tablet.jpg);
+        background-size: 768px 400px;
+    }
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/img-hero-tablet@2x.jpg);
+            }
+        }
 }
 // .hero {
 //     max-width: 1600px;

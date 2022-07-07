@@ -1,5 +1,7 @@
 .footer-contacts {
     flex-grow: 1;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .contact__link {
@@ -26,6 +28,7 @@
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
 }
 
 .footer__logo {
@@ -43,11 +46,12 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
-
+    text-align: center;
 }
 
 .social-list {
     display: flex;
+    justify-content: center;
 }
 
 .social-list__item:not(:last-child) {
@@ -80,11 +84,11 @@
 }
 
 
-.footer-container__baseline {
-    display: flex;
-    align-items: baseline;
-}
+// .footer-container__baseline {
+//     display: flex;
+//     align-items: baseline;
+// }
 
 .footer-social {
-    margin-left: 70px;
+    margin-bottom: 60px;
 }

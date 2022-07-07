@@ -1,6 +1,7 @@
 .filter {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    // justify-content: center;
     margin-bottom: 50px;
 }
 
@@ -9,6 +10,7 @@
 }
 
 .filter__modal-btn {
+    margin-bottom: 21px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;

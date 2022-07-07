@@ -82,8 +82,8 @@ body {
   }
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .mobile-menu {
@@ -98,6 +98,7 @@ body {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  z-index: 1;
 }
 
 .mobile-menu.is-open {
@@ -256,8 +257,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 580px;
+  width: 450px;
+  height: 610px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -370,14 +371,17 @@ body {
 
 .form__policy-user {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: var(--third-accent-color);
 }
 
 .form__policy {
   color: var(--accent-color);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
 }
 
 .checkbox__label {
@@ -466,26 +470,29 @@ body {
 }
 
 .hero {
-  max-width: 1600px;
-  padding: 200px 0px 200px 0px;
-  text-align: center;
   background-color: #C4C4C4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg.png");
-  background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/img-hero-mobile.jpg);
+  background-size: 480px 400px;
   margin-right: auto;
   margin-left: auto;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 118px 0;
+  text-align: center;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/img-hero-mobile@2x.jpg);
+  }
+}
 .hero__title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 42px;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .hero__modal-btn {
@@ -511,27 +518,31 @@ body {
 }
 
 .advantages {
-  display: flex;
+  display: block;
+}
+
+.advantages__item {
+  width: 100%;
 }
 
 .advantages__item:not(:last-child) {
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .advantages__title {
-  font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
+  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--secondary-accent-color);
   margin-bottom: 10px;
-  width: 270px;
+  color: var(--secondary-accent-color);
 }
 
 .advantages__description {
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--third-accent-color);
 }
@@ -540,7 +551,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 450px;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--fourth-accent-color);
@@ -550,47 +561,13 @@ body {
   fill: var(--secondary-accent-color);
 }
 
-.section_no-padding-top {
-  padding-top: 0px;
+@media screen and (max-width: 767px) {
+  .section_mobile-hidden {
+    display: none;
+  }
 }
-
-.what-we-do {
-  display: flex;
-}
-
-.what-we-do__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.what-we-do__card {
-  position: relative;
-  overflow: hidden;
-}
-
-.what-we-do__description {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  bottom: 0;
-  left: 0;
-  width: 370px;
-  height: 70px;
-  color: #FFFFFF;
-  background: rgba(47, 48, 58, 0.8);
-}
-
 .section_background-color {
   background-color: var(--fourth-accent-color);
-}
-
-.employees {
-  display: flex;
 }
 
 .employees__item {
@@ -599,11 +576,10 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 .employees__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .employees__title {
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -659,13 +635,25 @@ body {
 
 .clients {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clients__item {
+  width: 46%;
+}
+.clients__item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+.clients__item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 30px;
 }
 
 .clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -683,13 +671,9 @@ body {
   fill: var(--accent-color);
 }
 
-.clients__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
@@ -698,6 +682,7 @@ body {
 }
 
 .filter__modal-btn {
+  margin-bottom: 21px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -734,21 +719,10 @@ body {
   margin-top: 4px;
 }
 
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .portfolio__item {
-  width: 370px;
+  width: 450px;
   margin-bottom: 30px;
   background: #FFFFFF;
-}
-.portfolio__item:nth-child(n+6) {
-  margin-bottom: 0px;
-}
-.portfolio__item:not(:nth-child(3n)) {
-  margin-right: 30px;
 }
 
 .portfolio-description {
@@ -796,6 +770,8 @@ body {
 
 .footer-contacts {
   flex-grow: 1;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .contact__link {
@@ -821,6 +797,7 @@ body {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 }
 
 .footer__logo {
@@ -838,10 +815,12 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .social-list {
   display: flex;
+  justify-content: center;
 }
 
 .social-list__item:not(:last-child) {
@@ -869,22 +848,8 @@ body {
   fill: #ffffff;
 }
 
-.footer-container__baseline {
-  display: flex;
-  align-items: baseline;
-}
-
 .footer-social {
-  margin-left: 70px;
-}
-
-.subscription {
-  margin-left: 92px;
-}
-
-.subscription-form {
-  display: flex;
-  margin-right: auto;
+  margin-bottom: 60px;
 }
 
 .subscription-form__modal-btn {
@@ -903,7 +868,6 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
   align-items: center;
 }
 .subscription-form__modal-btn:hover, .subscription-form__modal-btn:focus {
@@ -915,9 +879,9 @@ body {
 }
 
 .subscription-form__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;

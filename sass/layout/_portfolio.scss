@@ -15,23 +15,23 @@
     margin-top: 4px;
 }
 
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
-}
+// .portfolio {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
 
 .portfolio__item {
-    width: 370px;
+    width: 450px;
     margin-bottom: 30px;
     background: #FFFFFF;
 
-    &:nth-child(n +6) {
-        margin-bottom: 0px;
-    }
+    // &:nth-child(n +6) {
+    //     margin-bottom: 0px;
+    // }
     
-    &:not(:nth-child(3n)) {
-        margin-right: 30px;
-    }
+    // &:not(:nth-child(3n)) {
+    //     margin-right: 30px;
+    // }
 }
 
 .portfolio-description {

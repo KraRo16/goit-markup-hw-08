@@ -432,9 +432,10 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer-container__baseline">
-            <div class="footer-contacts">
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-contacts">
+            <div class="footer-contacts__box">
                 <a class="footer__logo logo link" href="/" lang="en">Web<span
                         class="footer__logo logo__light">Studio</span></a>
                 <!--CONTACT INFORMATION-->
@@ -454,6 +455,7 @@
                     </ul>
                 </address>
             </div>
+
             <div class="footer-social">
                 <h3 class="footer-title">присоединяйтесь</h3>
                 <ul class="social-list list">
@@ -486,23 +488,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="subscription">
-                <h3 class="footer-title">Подпишитесь на рассылку</h3>
-                <form>
-                    <label class="subscription-form">
-                        <input class="subscription-form__input" type="email" name="subscription_email"
-                            placeholder="E-mail" required>
-                        <button class="subscription-form__modal-btn" type="submit">
-                            Подписаться
-                            <svg class="subscription__btn-icon" width="24" height="24">
-                                <use href="./images/icon/sprite.svg#subscription-icon"></use>
-                            </svg>
-                        </button>
-                    </label>
-                </form>
-            </div>
         </div>
-    </footer>
+        <div class="subscription">
+            <h3 class="footer-title">Подпишитесь на рассылку</h3>
+            <form>
+                <label class="subscription-form">
+                    <input class="subscription-form__input" type="email" name="subscription_email" placeholder="E-mail"
+                        required>
+                    <button class="subscription-form__modal-btn" type="submit">
+                        Подписаться
+                        <svg class="subscription__btn-icon" width="24" height="24">
+                            <use href="./images/icon/sprite.svg#subscription-icon"></use>
+                        </svg>
+                    </button>
+                </label>
+            </form>
+        </div>
+    </div>
+</footer>
     <script src="./js/menu.js"></script>
 </body>
 

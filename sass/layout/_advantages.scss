@@ -21,16 +21,6 @@
         color: var(--secondary-accent-color);
 }
 
-// .advantages__title {
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.03em;
-//     text-transform: uppercase;
-//     color: var(--secondary-accent-color);
-//     margin-bottom: 10px;
-//     width: 270px;
-// }
 
 .advantages__description {
     font-size: 14px;
@@ -53,6 +43,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .advantages__title {
+        text-align: left;
+    }
+
     .advantages {
         display: flex;
         flex-wrap: wrap;
@@ -74,3 +68,14 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .advantages__item {
+        width: 270px;
+    }
+    .advantages__item:not(:last-child) {
+        margin-right: 30px;
+    }
+        .advantages__box {
+            width: 270px;
+        }
+}

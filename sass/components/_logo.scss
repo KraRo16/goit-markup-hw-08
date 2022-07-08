@@ -21,3 +21,10 @@
 .logo__light {
     color: var(--primary-logo-color-theme-dark);
 }
+
+@media screen and (min-width: 1200px) {
+    .logo {
+        font-size: 26px;
+        line-height: 31px;
+    }
+}

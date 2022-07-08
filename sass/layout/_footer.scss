@@ -109,3 +109,24 @@
   }
 
 }
+
+@media screen and (min-width: 1200px) {
+
+.footer-container {
+        display: flex;
+            align-items: baseline;
+}
+.footer-contacts {
+        margin-bottom: 0;
+            margin-right: 93px;
+            flex-grow: 1;
+}
+.footer-contacts__box {
+    text-align: left;
+        margin-right: 70px;
+}
+.footer-contacts__box{
+    margin-bottom: 0;
+}
+
+}

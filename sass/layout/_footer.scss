@@ -88,9 +88,6 @@
 }
 }
 
-.footer-social {
-    margin-bottom: 60px;
-}
 
 @media screen and (min-width: 768px) {
 .footer-contacts {
@@ -107,6 +104,10 @@
       margin-left: auto;
       width: 450px;
   }
+  .footer-contacts__box {
+      margin-bottom: 0;
+  }
+  
 
 }
 
